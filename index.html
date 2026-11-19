@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zhanel Oralova — Product Designer & Creator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/zhanel-hero.png" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -185,7 +187,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
     <div class="track"><span>Zhanel Oralova<svg viewBox="0 0 40 40"><path d="M20 0C21.5 13 27 18.5 40 20C27 21.5 21.5 27 20 40C18.5 27 13 21.5 0 20C13 18.5 18.5 13 20 0Z" fill="currentColor"/></svg></span></div>
   </div>
   <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Zhanel Oralova, Product Designer and Content Creator</h1>
-  <canvas class="me" id="me" role="img" aria-label="Zhanel Oralova"></canvas>
+  <img class="me" id="me" src="assets/zhanel-hero.png" alt="Zhanel Oralova" fetchpriority="high">
   <div class="hero-meta">
     <p>Product designer (UX/UI) & content creator. I design apps people come back to, and film the stories in between.</p>
     <div class="scroll">Scroll <i>↓</i></div>
@@ -199,8 +201,8 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
     <p>Product design shipped to production, and the videos I make on the side.</p>
   </div>
   <!-- EDIT: each project = text on top, media below.
-       Wide video (16:9): <div class="stage"><video src="assets/x.mp4" autoplay muted loop playsinline></video></div>
-       Phone video (vertical): put <video src="assets/x.mp4" autoplay muted loop playsinline></video> inside .phone -->
+       Wide video (16:9): <div class="stage"><video data-src="assets/x.mp4" muted loop playsinline></video></div>
+       Phone video (vertical): put <video data-src="assets/x.mp4" muted loop playsinline></video> inside .phone -->
   <div class="items">
     <article class="proj">
       <div class="item-top">
@@ -214,7 +216,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
           <div class="stat"><b>487,719</b><span>active users<br>Qatar · Kuwait · Oman</span></div>
         </div>
       </div>
-      <div class="stage-wrap"><div class="stage"><video src="assets/royal-club.mp4" poster="assets/royal-club-poster.jpg" autoplay muted loop playsinline preload="metadata"></video></div></div>
+      <div class="stage-wrap"><div class="stage"><video data-src="assets/royal-club.mp4" data-poster="assets/royal-club-poster.jpg" muted loop playsinline preload="none"></video></div></div>
     </article>
     <article class="proj">
       <div class="item-top">
@@ -228,7 +230,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
           <div class="stat"><b>76,696</b><span>active members<br>Qatar · Kuwait · Oman</span></div>
         </div>
       </div>
-      <div class="stage-wrap"><div class="stage ph-stage vert" style="--bg:radial-gradient(ellipse at 50% 40%,#5a1a2a,#2a0f14 60%,#160709)"><video src="assets/snoonu-plus.mp4" poster="assets/snoonu-plus.jpg" autoplay muted loop playsinline preload="metadata"></video></div></div>
+      <div class="stage-wrap"><div class="stage ph-stage vert" style="--bg:radial-gradient(ellipse at 50% 40%,#5a1a2a,#2a0f14 60%,#160709)"><video data-src="assets/snoonu-plus.mp4" data-poster="assets/snoonu-plus.jpg" muted loop playsinline preload="none"></video></div></div>
     </article>
     <article class="proj">
       <div class="item-top">
@@ -241,7 +243,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
           <p>I ran a style and lifestyle blog and studied the craft behind it: cinematic framing, hooks in the first seconds and keeping people watching until the end.</p>
         </div>
       </div>
-      <div class="stage-wrap"><div class="stage ph-stage trio" style="--bg:linear-gradient(135deg,#c4444f,#f08a5d 55%,#ffd08a)"><div class="phone"><video src="assets/blog-1.mp4" poster="assets/blog-1.jpg" autoplay muted loop playsinline preload="metadata"></video></div><div class="phone"><video src="assets/blog-2.mp4?v=2" poster="assets/blog-2.jpg?v=2" autoplay muted loop playsinline preload="metadata"></video></div><div class="phone"><video src="assets/blog-3.mp4" poster="assets/blog-3.jpg" autoplay muted loop playsinline preload="metadata"></video></div></div></div>
+      <div class="stage-wrap"><div class="stage ph-stage trio" style="--bg:linear-gradient(135deg,#c4444f,#f08a5d 55%,#ffd08a)"><div class="phone"><video data-src="assets/blog-1.mp4" data-poster="assets/blog-1.jpg" muted loop playsinline preload="none"></video></div><div class="phone"><video data-src="assets/blog-2.mp4?v=2" data-poster="assets/blog-2.jpg?v=2" muted loop playsinline preload="none"></video></div><div class="phone"><video data-src="assets/blog-3.mp4" data-poster="assets/blog-3.jpg" muted loop playsinline preload="none"></video></div></div></div>
     </article>
     <article class="proj">
       <div class="item-top">
@@ -254,7 +256,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
           <p>For each client I built a complete style guide, from colour type and body shape to a ready capsule wardrobe. I also did wardrobe reviews and personal shopping.</p>
         </div>
       </div>
-      <div class="stage-wrap"><div class="stage"><video src="assets/styling.mp4" poster="assets/styling-poster.jpg" autoplay muted loop playsinline preload="metadata"></video></div></div>
+      <div class="stage-wrap"><div class="stage"><video data-src="assets/styling.mp4" data-poster="assets/styling-poster.jpg" muted loop playsinline preload="none"></video></div></div>
     </article>
   </div>
 </section>
@@ -288,7 +290,7 @@ footer{background:linear-gradient(180deg,#ffd08a,#f9ac68);color:var(--cobalt);pa
 <footer id="contact">
   <div class="talk">
     <div class="talk-l">
-      <div class="avatar" title="Hi!"><img class="a" src="assets/sticker-kiss.png" alt=""><img class="b" src="assets/sticker-wink.png" alt=""></div>
+      <div class="avatar" title="Hi!"><img class="a" src="assets/sticker-kiss-sm.png" alt=""><img class="b" src="assets/sticker-wink-sm.png" alt=""></div>
       <div><h2><a href="https://t.me/pojalelbynonet" target="_blank">Let's talk!</a></h2><p>Open to product design projects & collabs.</p></div>
     </div>
     <div class="socials">
@@ -362,26 +364,21 @@ requestAnimationFrame(frame);
 document.querySelectorAll('.ico').forEach(e=>e.innerHTML=ICONS[+e.dataset.ico]);
 
 
-// ===== Hero photo: smooth white sticker outline =====
-(function(){
-  const img=new Image();img.src='assets/zhanel-kiss.png';
-  img.onload=()=>{
-    const W=img.naturalWidth,H=img.naturalHeight,S=2,R=Math.round(H*.012),PAD=R+4;
-    // white silhouette
-    const sil=document.createElement('canvas');sil.width=W*S;sil.height=H*S;const sx=sil.getContext('2d');
-    sx.imageSmoothingQuality='high';sx.drawImage(img,0,0,W*S,H*S);sx.globalCompositeOperation='source-in';sx.fillStyle='#fff';sx.fillRect(0,0,W*S,H*S);
-    const cv=document.getElementById('me');cv.width=(W+PAD*2)*S;cv.height=(H+PAD*2)*S;const c=cv.getContext('2d');
-    c.imageSmoothingQuality='high';
-    // stamp the silhouette around a circle -> smooth, rounded outline
-    for(let r=R/3;r<=R;r+=R/3)for(let a=0;a<360;a+=8){const t=a*Math.PI/180;c.drawImage(sil,(PAD+Math.cos(t)*r)*S,(PAD+Math.sin(t)*r)*S)}
-    c.drawImage(img,PAD*S,PAD*S,W*S,H*S);
-  };
-})();
+
 
 // ===== Footer avatar: swap stickers =====
 const av=document.querySelector('.avatar');
 setInterval(()=>av.classList.toggle('alt'),1400);
 av.addEventListener('pointerenter',()=>av.classList.toggle('alt'));
+
+// ===== Lazy videos: load near the viewport, play only when visible =====
+(function(){
+  const vids=[...document.querySelectorAll('video[data-src]')];
+  const load=v=>{if(v.dataset.loaded)return;v.dataset.loaded=1;if(v.dataset.poster)v.poster=v.dataset.poster;v.src=v.dataset.src;v.preload='auto'};
+  const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);near.unobserve(e.target)}}),{rootMargin:'600px 0px'});
+  const vis=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){load(v);v.play().catch(()=>{})}else v.pause()}),{threshold:.15});
+  vids.forEach(v=>{v.muted=true;near.observe(v);vis.observe(v)});
+})();
 </script>
 </body>
 </html>
